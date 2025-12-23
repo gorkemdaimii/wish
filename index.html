@@ -8,37 +8,46 @@
 </head>
 <body class="bg">
 
-  <div class="shell">
-    <div class="top">
-      <div class="badge">2026 🎄</div>
+  <header class="hero">
+    <div class="hero-left">
+      <div class="pill">🎄 2026 • Wish Tree</div>
       <h1>Dijital Yılbaşı Ağacı</h1>
-      <p class="subtitle">Dileğini bırak. Yılbaşı gecesi açılacak ✨</p>
+      <p class="sub">Dileğini bırak. Yılbaşı gecesi açılacak ✨</p>
+
+      <div class="card">
+        <div class="field">
+          <label>İsim</label>
+          <input id="name" placeholder="İsmin (listeden)" autocomplete="off" />
+        </div>
+
+        <div class="field">
+          <label>Dilek</label>
+          <textarea id="wish" placeholder="Dileğin (max 280)" maxlength="280"></textarea>
+        </div>
+
+        <button id="submitBtn">Dileği As</button>
+        <p id="error" class="msg error"></p>
+        <p id="hint" class="msg hint"></p>
+      </div>
+
+      <div class="tiny">
+        admin: <a href="./admin.html">admin.html</a>
+      </div>
     </div>
 
-    <div class="card">
-      <label class="label">İsim</label>
-      <input id="name" placeholder="İsmin (listeden)" autocomplete="off" />
-
-      <label class="label">Dilek</label>
-      <textarea id="wish" placeholder="Dileğin (max 280)" maxlength="280"></textarea>
-
-      <button id="submitBtn">Dileği As</button>
-
-      <p id="error" class="msg error"></p>
-      <p id="hint" class="msg hint"></p>
+    <div class="hero-right">
+      <div class="tree-scene">
+        <div class="tree-glow"></div>
+        <div class="tree-wrap">
+          <div class="star">✦</div>
+          <div class="garland"></div>
+          <div id="wishes"></div>
+          <div class="trunk"></div>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <div class="tree-wrap">
-      <div class="star">✦</div>
-      <div class="tree-lights"></div>
-      <div id="wishes"></div>
-    </div>
-
-    <div class="footer">
-      <span style="opacity:.5">admin: <a href="./admin.html" style="color:inherit">admin.html</a></span>
-    </div>
-  </div>
-
-  <script type="module" src="script.js"></script>
+  <script type="module" src="./script.js"></script>
 </body>
 </html>
