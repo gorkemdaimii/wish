@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Admin | Yılbaşı Ağacı</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel 🎁</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body class="bg">
 
-<div class="card admin">
-  <h1>🎁 Admin Panel</h1>
-  <p class="subtitle">Dilekleri aç / kapat</p>
+  <div class="shell">
+    <div class="top">
+      <div class="badge danger">ADMIN</div>
+      <h1>Admin Panel</h1>
+      <p class="subtitle">Giriş yap → dilekleri aç / kilitle / reset</p>
+    </div>
 
-  <input id="adminPass" type="password" placeholder="Admin Şifre">
-  <button onclick="unlockWishes()">Dilekleri Aç</button>
-  <button class="danger" onclick="lockWishes()">Tekrar Kilitle</button>
-  <button class="danger" onclick="resetAllWishes()">
-  🗑️ Tüm Dilekleri Sıfırla
-</button>
+    <div class="card">
+      <label class="label">Admin Email</label>
+      <input id="adminEmail" type="email" placeholder="email" autocomplete="username" />
 
+      <label class="label">Admin Şifre</label>
+      <input id="adminPass" type="password" placeholder="şifre" autocomplete="current-password" />
 
-  <p id="adminError"></p>
-</div>
+      <button id="adminLoginBtn">Giriş Yap</button>
 
-<script src="script.js"></script>
+      <div class="row">
+        <button id="unlockBtn" class="ghost">🎉 Dilekleri Aç</button>
+        <button id="lockBtn" class="ghost danger">🔒 Kilitle</button>
+      </div>
+
+      <button id="resetBtn" class="danger">🗑️ Tüm Dilekleri Sıfırla</button>
+
+      <p id="adminError" class="msg error"></p>
+      <p id="adminStatus" class="msg hint"></p>
+    </div>
+
+    <div class="footer">
+      <span>admin only 🔐</span>
+    </div>
+  </div>
+
+  <script type="module" src="./script.js"></script>
 </body>
 </html>
