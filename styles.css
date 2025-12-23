@@ -1,8 +1,6 @@
 :root{
   --bg1:#020617;
   --bg2:#000;
-  --glass:rgba(255,255,255,.08);
-  --glass2:rgba(255,255,255,.05);
   --stroke:rgba(255,255,255,.18);
   --text:rgba(255,255,255,.95);
   --muted:rgba(255,255,255,.60);
@@ -144,7 +142,7 @@ button.danger{
   line-height:1.35;
 }
 .msg.error{color:#ff9b9b}
-.msg.hint{color:rgba(255,255,255,.65)}
+.msg.hint{color:rgba(255,255,255,.70)}
 
 /* ===== TREE ===== */
 .tree-wrap{
@@ -156,7 +154,6 @@ button.danger{
   overflow:visible;
 }
 
-/* tree shape */
 .tree-wrap::before{
   content:"";
   position:absolute;
@@ -170,7 +167,6 @@ button.danger{
   z-index:1;
 }
 
-/* soft lights layer */
 .tree-lights{
   position:absolute;
   inset:0;
@@ -183,7 +179,6 @@ button.danger{
     radial-gradient(10px 10px at 55% 72%, rgba(0,255,200,.85), transparent 60%),
     radial-gradient(10px 10px at 42% 74%, rgba(245,201,122,.9), transparent 60%);
   opacity:.75;
-  filter: blur(.2px);
   animation: twinkle 2.2s ease-in-out infinite;
 }
 @keyframes twinkle{0%,100%{opacity:.55}50%{opacity:.9}}
@@ -199,15 +194,14 @@ button.danger{
   z-index:6;
 }
 
-/* ✅ CRITICAL: wishes layer (fix) */
+/* ✅ wishes layer */
 #wishes{
   position:absolute;
   inset:0;
-  z-index:5;          /* tree üstü */
+  z-index:5;
   pointer-events:none;
 }
 
-/* wish ornaments */
 .wish{
   position:absolute;
   z-index:7;
@@ -229,7 +223,6 @@ button.danger{
 @keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 .wish.locked{filter: blur(8px); opacity:.95}
 
-/* footer */
 .footer{
   font-size:12px;
   color:rgba(255,255,255,.45);
@@ -237,7 +230,6 @@ button.danger{
   padding:10px 0 6px;
 }
 
-/* ===== MOBILE ===== */
 @media (max-width:420px){
   .tree-wrap{transform:scale(.92); margin-top:2px}
   .row{flex-direction:column}

@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dijital Yılbaşı Ağacı 🎄</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg">
 
@@ -23,21 +23,22 @@
       <textarea id="wish" placeholder="Dileğin (max 280)" maxlength="280"></textarea>
 
       <button id="submitBtn">Dileği As</button>
+
       <p id="error" class="msg error"></p>
       <p id="hint" class="msg hint"></p>
     </div>
 
-    <div class="tree-wrap" aria-label="Yılbaşı ağacı">
+    <div class="tree-wrap">
       <div class="star">✦</div>
       <div class="tree-lights"></div>
       <div id="wishes"></div>
     </div>
 
     <div class="footer">
-      <span>Made with ✨</span>
+      <span style="opacity:.5">admin: <a href="./admin.html" style="color:inherit">admin.html</a></span>
     </div>
   </div>
 
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>

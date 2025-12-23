@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Panel 🎁</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="bg">
 
@@ -12,7 +12,7 @@
     <div class="top">
       <div class="badge danger">ADMIN</div>
       <h1>Admin Panel</h1>
-      <p class="subtitle">Giriş yap → dilekleri aç / kilitle / reset</p>
+      <p class="subtitle">Login ol → dilekleri gör / aç / kilitle / reset</p>
     </div>
 
     <div class="card">
@@ -35,11 +35,17 @@
       <p id="adminStatus" class="msg hint"></p>
     </div>
 
+    <div class="tree-wrap">
+      <div class="star">✦</div>
+      <div class="tree-lights"></div>
+      <div id="wishes"></div>
+    </div>
+
     <div class="footer">
       <span>admin only 🔐</span>
     </div>
   </div>
 
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
