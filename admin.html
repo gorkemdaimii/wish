@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin | Yılbaşı Ağacı</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg">
+
+<div class="card admin">
+  <h1>🎁 Admin Panel</h1>
+  <p class="subtitle">Dilekleri aç / kapat</p>
+
+  <input id="adminPass" type="password" placeholder="Admin Şifre">
+  <button onclick="unlockWishes()">Dilekleri Aç</button>
+  <button class="danger" onclick="lockWishes()">Tekrar Kilitle</button>
+  <button class="danger" onclick="resetAllWishes()">
+  🗑️ Tüm Dilekleri Sıfırla
+</button>
+
+
+  <p id="adminError"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

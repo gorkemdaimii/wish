@@ -1,0 +1,145 @@
+:root {
+  --bg1:#020617;
+  --bg2:#000;
+  --glass:rgba(255,255,255,.08);
+  --stroke:rgba(255,255,255,.18);
+  --text:rgba(255,255,255,.95);
+  --muted:rgba(255,255,255,.55);
+  --gold:#f5c97a;
+}
+
+* {
+  box-sizing:border-box;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",Inter,system-ui;
+}
+
+body.bg {
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(600px 300px at 80% -10%, rgba(0,255,200,.12), transparent),
+    radial-gradient(500px 300px at 20% 10%, rgba(0,120,255,.12), transparent),
+    linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:var(--text);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:16px;
+}
+
+/* CARD */
+.card {
+  width:100%;
+  max-width:420px;
+  padding:24px;
+  margin-top:32px;
+  background:linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.04));
+  border-radius:28px;
+  backdrop-filter:blur(18px);
+  border:1px solid var(--stroke);
+  box-shadow:0 30px 80px rgba(0,0,0,.55);
+  text-align:center;
+}
+
+.card h1 {
+  margin:0;
+  font-size:22px;
+  letter-spacing:-.02em;
+}
+
+.subtitle {
+  font-size:13px;
+  color:var(--muted);
+  margin-top:6px;
+}
+
+/* INPUTS */
+input,textarea {
+  width:100%;
+  margin-top:14px;
+  padding:14px 16px;
+  border-radius:16px;
+  border:1px solid transparent;
+  background:rgba(255,255,255,.12);
+  color:var(--text);
+  outline:none;
+}
+
+textarea {
+  resize:none;
+  height:80px;
+}
+
+input:focus,textarea:focus {
+  border-color:var(--gold);
+}
+
+/* BUTTON */
+button {
+  margin-top:18px;
+  width:100%;
+  padding:14px;
+  border-radius:999px;
+  border:none;
+  background:linear-gradient(135deg,#f7d58b,#e6a94f);
+  color:#1a1205;
+  font-weight:600;
+}
+
+/* ERR */
+#error,#adminError {
+  margin-top:10px;
+  font-size:12px;
+  color:#ff9b9b;
+}
+
+/* TREE */
+.tree-wrap {
+  position:relative;
+  width:260px;
+  height:360px;
+  margin:48px 0 80px;
+}
+
+.tree-wrap::before {
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  border-left:130px solid transparent;
+  border-right:130px solid transparent;
+  border-bottom:300px solid #0e6a53;
+}
+
+.star {
+  position:absolute;
+  top:-24px;
+  left:50%;
+  transform:translateX(-50%);
+  font-size:26px;
+  color:var(--gold);
+  text-shadow:0 0 16px rgba(245,201,122,.8);
+}
+
+/* WISH */
+.wish {
+  position:absolute;
+  padding:6px 10px;
+  font-size:11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.2);
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.locked {
+  filter:blur(8px);
+}
+
+/* MOBILE POLISH */
+@media (max-width:420px) {
+  .tree-wrap {
+    transform:scale(.9);
+  }
+}
