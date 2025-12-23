@@ -16,16 +16,16 @@ import {
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
-/* ====== FIREBASE CONFIG (PASTE YOURS) ====== */
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "PASTE",
-  authDomain: "PASTE",
-  projectId: "PASTE",
-  storageBucket: "PASTE",
-  messagingSenderId: "PASTE",
-  appId: "PASTE"
+  apiKey: "AIzaSyB7r0bhg-yTWJQCvMs7-1PbuClIDC0DGFg",
+  authDomain: "wish-e4fb8.firebaseapp.com",
+  projectId: "wish-e4fb8",
+  storageBucket: "wish-e4fb8.firebasestorage.app",
+  messagingSenderId: "387741708014",
+  appId: "1:387741708014:web:a8bfda73f7ef7ba69dcdff",
+  measurementId: "G-2J3NN1F60Q"
 };
-/* ========================================= */
 
 const allowedNames = [
   "muhammed rasim can","muhammed","muhammed rasim",
